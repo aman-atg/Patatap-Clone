@@ -1,0 +1,24 @@
+{
+  "name": "patatap-clone",
+  "version": "1.0.0",
+  "description": "Similar Website like Patatap",
+  "main": "index.html",
+  "dependencies": {
+    "howler": "^2.1.2",
+    "paper": "^0.12.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aman-atg/Patatap-Clone.git"
+  },
+  "author": "Aman Ansari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aman-atg/Patatap-Clone/issues"
+  },
+  "homepage": "https://github.com/aman-atg/Patatap-Clone#readme"
+}
