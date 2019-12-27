@@ -30,7 +30,7 @@
         choice = (Max == choice)? 0:choice++;
 
         for(i=0; i<26; i++){
-            tempAddr = MainAddr + soundAddr[0][i] +'.mp3';
+            tempAddr = MainAddr + soundAddr[choice][i] +'.mp3';
             sounds[i]  = new Howl({
                 src : tempAddr
             });
@@ -59,13 +59,17 @@
     var x   = event.key;
     var len = x.length;
     var charNum = x.charCodeAt(0);
+    
+    // ! change music folders when pressed "space"
+    if(x=="space")addMusic();
+
 
     if( len == 1 && charNum >=97 && charNum <= 122 ){
         // ! DEBUG
         console.log(x.charCodeAt(0));
 
         // ! Playing Sound for Each Defined Key   
-        // ! will add a condition if "space" is pressed then a diff. set of sounds should be played next time   
+ 
         sounds[charNum-97].play();
         console.log(charNum-97);
         // ! Creating Circles ...have to change this..as used circles are not getting removed
