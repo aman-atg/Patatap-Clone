@@ -3,20 +3,20 @@
                     ..can add other soundAd for other folder when the user press space ..      
         */
     
-    var choice =0, Max= 1;// currently max is 1 but I can increase number of folders for music then it'll also increase as well
+    var choice =-1, Max= 6;// currently max is 1 but I can increase number of folders for music then it'll also increase as well
 
 
-    var MainAddr = 'assets/music/A/';
-    // SOUNDS form folder A
+    var MainAddr = 'assets/music/';
+
+    var folderX = ['A','B','C','D','E','F','G'];
+    // SOUNDS form folder X
     var soundAddr =[
-        ['bubbles','clay','confetti','corona','dotted-spiral','flash-1','flash-2','flash-3',
+
+        'bubbles','clay','confetti','corona','dotted-spiral','flash-1','flash-2','flash-3',
         'glimmer','moon','pinwheel','piston-1','piston-2','piston-3','prism-1','prism-2',
         'prism-3','splits','squiggle','strike','suspension','timer','ufo','veil','wipe','zig-zag'
-        ],
-        [
-            'will add'
-        ]
-    ]
+
+    ];
 
     var tempAddr;
     // our music ...for 26 letters only (one set at a time)
@@ -28,9 +28,9 @@
     function addMusic(){
 
         choice = (Max == choice)? 0:choice++;
-
+   
         for(i=0; i<26; i++){
-            tempAddr = MainAddr + soundAddr[choice][i] +'.mp3';
+            tempAddr = MainAddr +  folderX[choice] +"/" + soundAddr[i] +'.mp3';
             sounds[i]  = new Howl({
                 src : tempAddr
             });
@@ -85,7 +85,7 @@
         // add num rgb format strings in it
         for(var i=0; i<3;i++){
             a = Math.floor(Math.random()*256);            
-            colr +=a;
+            colr += a;
             if(i==2)colr+=")";
             else colr+=", ";
         }
