@@ -4,9 +4,7 @@
   "description": "A lower version of patatap site.",
   "main": "app.js",
   "dependencies": {
-    "express": "^4.17.1",
-    "howler": "^2.1.2",
-    "paper": "^0.12.4"
+    "express": "^4.17.1"
   },
   "devDependencies": {},
   "scripts": {
