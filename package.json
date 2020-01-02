@@ -1,9 +1,10 @@
 {
   "name": "patatap-clone",
   "version": "1.0.0",
-  "description": "Similar Website like Patatap",
-  "main": "index.html",
+  "description": "A lower version of patatap site.",
+  "main": "app.js",
   "dependencies": {
+    "express": "^4.17.1",
     "howler": "^2.1.2",
     "paper": "^0.12.4"
   },
