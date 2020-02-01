@@ -1,8 +1,4 @@
-        // have to work on this one... author left me hanging around on this one... fck..
-        /*  idea :- ascii in js?..if yes then use for loop and make circles etc only for a,b,c...z 
-                    ..can add other soundAd for other folder when the user press space ..      
-        */
-    
+   
     var choice =-1, Max= 6;// currently max is 1 but I can increase number of folders for music then it'll also increase as well
 
 
