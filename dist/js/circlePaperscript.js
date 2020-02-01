@@ -60,16 +60,37 @@ var circles = [];
 // on keydown creat cicles of one type
 // next create circles with diff colors
 
+var test = "";
+var ourSequence = "";
+var flg = 0;
+
 function onKeyDown(event) {
   // the pressed key
-  var x = event.key;
-  var len = x.length;
-  var charNum = x.charCodeAt(0);
+  var x = event.key,
+    len = x.length,
+    charNum = x.charCodeAt(0),
+    masterStart = "4444",
+    masterExit = "cape";
+
+  test += x;
+  var lenOftest = test.length;
+  if (lenOftest >= 4) {
+    test = test.slice(lenOftest - 4, lenOftest);
+    console.log(test);
+  }
+  if (test == masterStart) {
+    ourSequence = "";
+    flg = 1;
+  } else if (test === masterExit) {
+    flg = 0;
+    console.log("our fucking seq is " + ourSequence);
+  }
 
   // ! change music folders when pressed "space"
   if (x == "space") addMusic();
 
   if (len == 1 && charNum >= 97 && charNum <= 122) {
+    if (flg) ourSequence += x;
     // ! DEBUG
     // console.log(x.charCodeAt(0));
 
@@ -77,8 +98,7 @@ function onKeyDown(event) {
 
     sounds[charNum - 97].play();
     // console.log(charNum-97);
-    // ! Creating Circles ...have to change this..as used circles are not getting removed
-
+    // ! Creating Circles
     var maxPoint = new Point(view.size.width, view.size.height);
     var randNess = Point.random();
     var curPoint = maxPoint * randNess;
