@@ -37,8 +37,8 @@ module.exports = function(grunt) {
       }
     },
     watch: {
-      files: ["./dist/css/sass/*"],
-      tasks: ["sacat"]
+      files: ["./dist/js/*"],
+      tasks: ["concat-js", "uglify"]
     }
 
     // paper: {
