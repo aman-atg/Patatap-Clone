@@ -32,6 +32,10 @@ module.exports = function(grunt) {
           src: "public/build/js/scripts.js",
           dest: "public/build/js/scripts.min.js"
         }
+        // paper: {
+        //   src: "dist/js/circlePaperscript.js",
+        //   dest: "public/build/js/circlePaperscript.min.js"
+        // }
       }
     }
   });
